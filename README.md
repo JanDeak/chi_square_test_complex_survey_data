@@ -23,3 +23,4 @@ print s
 v=independance_test_complex(prva,druha,prva_txt,druha_txt)
 print v
 
+For any queestions, please dont hesitate to ask: jan.deak@yahoo.com
