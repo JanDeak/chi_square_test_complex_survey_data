@@ -2,7 +2,7 @@
 chi square test on complex survey data and normal chi square test
 
 Code consitst of test of indepandence recommende to use on complex survey data.
-Libralies needed PANDAS, numpy, scipy.
+Libralies needed PANDAS, numpy, scipy. All you nedd to do is specify weights as weights=pd.DataFrame['vahy']
 You can compare results of the tests with:
 
 
