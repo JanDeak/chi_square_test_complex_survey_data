@@ -14,8 +14,7 @@ def independance_test_complex_survey(prva,druha,prva_txt,druha_txt,weights):
     mf=pd.DataFrame(y)
     #vysledok_testu= stats.chi2_contingency(observed= mf)
     crit = stats.chi2.ppf(q = 0.95, # kriticka hodnota*
-                      df = (len(prva.unique())-1)*(len(druha.unique()-1)))
-       
+                      df = (len(prva.unique())-1)*(len(druha.unique()-1)))    
     y_suma_stlpcov= y.sum(axis=0)
     y_suma_riadkov= y.sum(axis=1)
 
