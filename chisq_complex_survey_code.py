@@ -1,5 +1,5 @@
 
-def independance_test_complex_survey(prva,druha,prva_txt,druha_txt):
+def independance_test_complex_survey(prva,druha,prva_txt,druha_txt,weights):
     col_1=prva_txt
     col_2=druha_txt
     prva_m=prva.unique()
