@@ -1,41 +1,25 @@
 
-def independance_test_complex(prva,druha,prva_txt,druha_txt):
-    
-
+def independance_test_complex_survey(prva,druha,prva_txt,druha_txt):
     col_1=prva_txt
     col_2=druha_txt
-
-
     prva_m=prva.unique()
     druha_m=druha.unique()
-
     y = np.zeros((len(prva.unique()), len(druha.unique())))
-    y
-
     suma_vah=float(data['vahy'].sum())
-
     for i in range(0,len(prva_m)):
         for j in range(0,len(druha_m)):
             zf=data[(data[col_1]==prva_m[i])&(data[col_2]==druha_m[j])]
             p=float(zf['vahy'].sum())/float(suma_vah) 
             y[int(i)][int(j)]=float(p)
-
-
     mf=pd.DataFrame(y)
-
     #vysledok_testu= stats.chi2_contingency(observed= mf)
-
     crit = stats.chi2.ppf(q = 0.95, # kriticka hodnota*
                       df = (len(prva.unique())-1)*(len(druha.unique()-1)))
-    
-    
+       
     y_suma_stlpcov= y.sum(axis=0)
     y_suma_riadkov= y.sum(axis=1)
 
-
-
     ###X2
-
     xxx=np.array([])
     for i in range(0,(len(prva_m))):
         for j in range(0,(len(druha_m))):        
